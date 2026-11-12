@@ -1,21 +1,19 @@
 package net.lecnam.ecue2.tp7;
 
+import net.lecnam.ecue2.tp7.film.Film;
 import net.lecnam.ecue2.tp7.nuancer.Nuancier;
 
-import java.util.Collections;
-import java.util.Iterator;
-import java.util.List;
-import java.util.Set;
+import java.util.*;
 
 public class Execute {
 
     public static void main(String[] args) {
 
-        exercice1();
-
-        exercice2();
-
-        exercice3();
+//        exercice1();
+//
+//        exercice2();
+//
+//        exercice3();
 
         exercice4();
 
@@ -81,6 +79,35 @@ public class Execute {
 
 
     private static void exercice4() {
+        Film film1 = new Film("Le Parrain", "Francis Ford Coppola", 1972);
+        Film film2 = new Film("Douze hommes en colère", "Reginald Rose", 1957);
+        Film film3 = new Film("Le Voyage De Chihiro", "Hayao Miyazaki", 2001);
+        Film film4 = new Film("Silent Voice", "Naoko Yamada", 2016);
+
+        Set<Film> films = new TreeSet<>();
+        films.add(film1);
+        films.add(film2);
+        films.add(film3);
+        films.add(film4);
+
+
+        System.out.println("----------------");
+        System.out.println("Methode : foreach");
+        for (Film film : films) {
+            System.out.println(film);
+        }
+
+
+        List<Film> films1 = new ArrayList<>(films);
+
+        Collections.reverse(films1);
+
+
+        System.out.println("\n----------------");
+        System.out.println("Methode post inverse : foreach");
+        for (Film film : films1) {
+            System.out.println(film);
+        }
 
 
 
