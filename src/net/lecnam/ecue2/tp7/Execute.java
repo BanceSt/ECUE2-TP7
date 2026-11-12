@@ -1,8 +1,10 @@
 package net.lecnam.ecue2.tp7;
 
 import net.lecnam.ecue2.tp7.film.Film;
+import net.lecnam.ecue2.tp7.film.FilmService;
 import net.lecnam.ecue2.tp7.nuancer.Nuancier;
 
+import java.io.IOException;
 import java.util.*;
 
 public class Execute {
@@ -114,8 +116,14 @@ public class Execute {
     }
 
     private static void exercice5() {
+        FilmService filmService;
+        try {
+            filmService = new FilmService();
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
 
-
+        filmService.printFilms();
 
     }
 
