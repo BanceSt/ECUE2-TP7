@@ -73,9 +73,10 @@ public class Execute {
     }
 
     private static void exercice3() {
+        Nuancier nuancier = new Nuancier();
+        System.out.println("\nExercice 3.");
 
-
-
+        System.out.println("Code r : " + nuancier.getCouleurFromCode('r'));
     }
 
 
