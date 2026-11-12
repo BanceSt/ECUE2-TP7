@@ -2,9 +2,11 @@ package net.lecnam.ecue2.tp7.nuancer;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Set;
+import java.util.TreeSet;
 
 public class Nuancier {
-    List<String> couleurs;
+    private List<String> couleurs;
 
     public Nuancier() {
         couleurs = new ArrayList<>();
@@ -17,6 +19,10 @@ public class Nuancier {
         couleurs.add("rouge");
 
         couleurs.addFirst("cyan");
+    }
+
+    public Set<String> getCouleursTreeSet() {
+        return new TreeSet<>(couleurs);
     }
 
     public List<String> getCouleurs() {
