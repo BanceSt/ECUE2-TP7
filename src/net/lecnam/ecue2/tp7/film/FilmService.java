@@ -27,6 +27,14 @@ public class FilmService {
         }
     }
 
+    public void searchFilm(String search) {
+        for (Film film:filmSet) {
+            if (film.getTitre().indexOf(search) != -1) {
+                System.out.println(film);
+            }
+        }
+    }
+
     public void printFilms() {
         for(Film film:filmSet) {
             System.out.println(film);
