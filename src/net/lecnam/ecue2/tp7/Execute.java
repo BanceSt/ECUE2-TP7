@@ -21,9 +21,9 @@ public class Execute {
 //
 //        exercice5();
 
-        exercice6();
+//        exercice6();
 
-
+        exercice7();
     }
 
     private static void exercice1() {
@@ -138,6 +138,17 @@ public class Execute {
         filmService.searchFilm("man");
 
 
+    }
+
+    private static void exercice7() {
+        FilmService filmService;
+        try {
+            filmService = new FilmService();
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+
+        filmService.searchFilmByAnnee(1985);
     }
 
 

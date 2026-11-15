@@ -1,11 +1,15 @@
 package net.lecnam.ecue2.tp7.film;
 
 import java.time.Year;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Set;
 
 public class Film implements Comparable<Film> {
     private String titre;
     private String realisateur;
     private Year anneeSortie;
+
 
     public Film(String titre, String realisateur, int annee) {
         this.titre = titre;
@@ -21,7 +25,9 @@ public class Film implements Comparable<Film> {
 
     @Override
     public int compareTo(Film f) {
-        return this.anneeSortie.compareTo(f.getAnneeSortie());
+        int result = this.anneeSortie.compareTo(f.getAnneeSortie());
+        return  result != 0 ? result :
+                this.titre.compareTo(f.getTitre());
     }
 
     public String getTitre() {
